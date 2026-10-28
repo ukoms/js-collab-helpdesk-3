@@ -7,6 +7,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <form onsubmit="">
+        <label for="title">Tytul: </label>
+        <input type="text" name="title"> <br>
+        <label for="priorytet">Priorytet: </label>
+        <select name="priorytet">
+            <option value="urgent">Urgent</option> 
+            <option value="non-urgent">Non-urgent</option>  
+        </select>
+        <br>
+        <input type="submit" style="display: none" />
+    </form>
 </body>
 </html>
