@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="./music.mp3" type="audio/mpeg">
+    </audio>
+    <h1>Helpdesk</h1>
+
+    <div class="panels">
+
+        <div class="panel">
+
+            <h2>Add Ticket</h2>
+
+            <form id="ticketForm">
+
+                <label for="title">Problem:</label>
+                <input type="text" id="title" name="title">
+
+                <p>Priority:
+
+                    <label>
+                        <input type="radio" name="priority" value="high">
+                        High
+                    </label>
+
+                    <label>
+                        <input type="radio" name="priority" value="normal" checked>
+                        Normal
+                    </label>
+
+                    <label>
+                        <input type="radio" name="priority" value="low">
+                        Low
+                    </label>
+
+                </p>
+
+                <button type="submit">Add Ticket</button>
+
+            </form>
+            <p id="message_add"></p>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>Filter Tickets</h2>
+
+            <label for="statusFilter">Filter by status:</label>
+
+            <select id="statusFilter">
+                <option value="all">All</option>
+                <option value="new">New</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+
+            <p>
+                Visible: <span id="visibleCount">0</span>
+                / All: <span id="totalCount">0</span>
+            </p>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>Change Status</h2>
+
+            <label for="ticketId">Ticket ID:</label>
+            <input type="text" id="ticketId">
+
+            <br>
+            <br>
+
+            <label for="newStatus">New status:</label>
+
+            <select id="newStatus">
+                <option value="new">New</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+
+            <br>
+            <br>
+
+            <button id="changeStatus" type="button" onclick="changeStatus()">
+                Change Status
+            </button>
+
+            <p id="message_change"></p>
+
+        </div>
+
+    </div>
+
+    <div class="tickets-section">
+
+        <h2>Tickets</h2>
+
+        <ul id="ticketList">
+        </ul>
+
+    </div>
+
+</body>
+</html>

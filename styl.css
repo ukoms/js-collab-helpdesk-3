@@ -1,0 +1,169 @@
+body {
+    background-color: lightblue;
+    font-size: 17px;
+    font-family: Comic Sans MS;
+    color: #3D3D3B;
+}
+
+h1, h2 {
+    background-color: #DCDCDC;
+    color: #3D3D3B;
+    text-align: center;
+    font-size: 35px;
+    border-style: outset;
+    border-width: thick;
+    margin: 35px 25px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+label {
+    margin-right: 6px;
+}
+
+input[type="text"] {
+    padding: 9px 12px;
+    border: 2px solid #aaa;
+    border-radius: 12px;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+    outline: none;
+    transition: width 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    width: 40%;
+    border-color: #3D3D3B;
+    box-shadow: 0 0 5px #777;
+}
+
+input[type="radio"] {
+    accent-color: #3D3D3B;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button {
+    background-color: #DCDCDC;
+    padding: 9px 22px;
+    border-radius: 12px;
+    border-style: outset;
+    border-width: thick;
+    font-size: 15px;
+    font-family: Comic Sans MS;
+    color: #3D3D3B;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3D3D3B;
+    color: #DCDCDC;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+select {
+    width: 10rem;
+    padding: 7px;
+    background-color: #DCDCDC;
+    border: #3D3D3B 2px solid;
+    border-radius: 8px;
+    font-family: Comic Sans MS;
+    font-size: 15px;
+    color: #3D3D3B;
+    cursor: pointer;
+}
+
+select > option {
+    background-color: #dcdcdc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+ul li {
+    background-color: #DCDCDC;
+    padding: 12px 16px;
+    margin: 0;
+    width: auto;
+    border-bottom: 1px solid #aaa;
+    color: #3D3D3B;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover {
+    background-color: #3D3D3B;
+    color: #DCDCDC;
+}
+
+p {
+    margin: 15px 0;
+}
+
+.panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 20px 25px;
+    align-items: start;
+}
+
+.panel {
+    min-width: 0;
+}
+
+.panel h2 {
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-size: 23px;
+    text-align: left;
+    margin: 10px 0 25px;
+    padding: 0;
+    color: #3D3D3B;
+}
+
+.tickets-section {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-top: 30px;
+}
+
+.tickets-section h2 {
+    background-color: #DCDCDC;
+    color: #3D3D3B;
+    text-align: center;
+    font-size: 35px;
+    border-style: outset;
+    border-width: thick;
+    margin: 35px 25px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#ticketList {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .panels {
+        grid-template-columns: 1fr;
+    }
+}
